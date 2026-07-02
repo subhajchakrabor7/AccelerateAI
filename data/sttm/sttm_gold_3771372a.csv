@@ -1,0 +1,11 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+products_silver,,products_gold,pk_gold_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+sales_data_silver,product_id,sales_data_gold,product_id,passthrough,
+sales_data_silver,sales_amount,sales_data_silver,total_sales,aggregate,sum
+sales_data_silver,product_id,sales_data_gold,product_id,rename,product_name
+sales_data_silver,sales_date,sales_data_gold,sales_date,date_format,%Y-%m-%d
+sales_data_silver,store_id,sales_data_gold,store_id,passthrough,
+stores_silver,store_id,stores_gold,store_id,passthrough,
+stores_silver,store_name,stores_gold,store_name,passthrough,
+products_silver,product_name,products_gold,product_name,passthrough,
+products_silver,product_category,products_gold,product_category,passthrough,

@@ -1,0 +1,6 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+sales_data,transaction_id,sales_data_bronze,transaction_id,passthrough,Direct copy of source column
+sales_data,customer_name,sales_data_bronze,customer_name,passthrough,Direct copy of source column
+sales_data,purchase_amount,sales_data_bronze,purchase_amount,passthrough,Direct copy of source column
+sales_data,,sales_data_bronze,_load_timestamp,type_cast,Inject current UTC ISO timestamp at load time
+sales_data,,sales_data_bronze,_source_file,type_cast,Inject source file path at load time

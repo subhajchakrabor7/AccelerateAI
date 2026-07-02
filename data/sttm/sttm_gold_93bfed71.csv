@@ -1,0 +1,8 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+,,gold_table,pk_gold_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+sales_data_silver,pk_sales_data_silver_id,gold_table,pk_sales_data_silver_id,passthrough,Direct copy from Silver
+sales_data_silver,transaction_id,gold_table,transaction_id,passthrough,Direct copy from Silver
+sales_data_silver,customer_name,gold_table,customer_name,passthrough,Direct copy from Silver
+sales_data_silver,purchase_amount,gold_table,purchase_amount,passthrough,Direct copy from Silver
+sales_data_silver,_load_timestamp,gold_table,_load_timestamp,passthrough,Direct copy from Silver
+sales_data_silver,_source_file,gold_table,_source_file,passthrough,Direct copy from Silver

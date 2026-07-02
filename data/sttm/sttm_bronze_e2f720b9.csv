@@ -1,0 +1,27 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+products,product_id,products_bronze,product_id,passthrough,Direct copy of source column
+products,product_name,products_bronze,product_name,passthrough,Direct copy of source column
+products,category,products_bronze,category,passthrough,Direct copy of source column
+products,standard_price,products_bronze,standard_price,passthrough,Direct copy of source column
+products,,products_bronze,_load_timestamp,type_cast,Inject current UTC ISO timestamp at load time
+products,,products_bronze,_source_file,type_cast,Inject source file path at load time
+sales_data,transaction_id,sales_data_bronze,transaction_id,passthrough,Direct copy of source column
+sales_data,transaction_date,sales_data_bronze,transaction_date,passthrough,Direct copy of source column
+sales_data,store_id,sales_data_bronze,store_id,passthrough,Direct copy of source column
+sales_data,product_id,sales_data_bronze,product_id,passthrough,Direct copy of source column
+sales_data,product_name,sales_data_bronze,product_name,passthrough,Direct copy of source column
+sales_data,category,sales_data_bronze,category,passthrough,Direct copy of source column
+sales_data,quantity,sales_data_bronze,quantity,passthrough,Direct copy of source column
+sales_data,unit_price,sales_data_bronze,unit_price,passthrough,Direct copy of source column
+sales_data,total_amount,sales_data_bronze,total_amount,passthrough,Direct copy of source column
+sales_data,customer_segment,sales_data_bronze,customer_segment,passthrough,Direct copy of source column
+sales_data,payment_method,sales_data_bronze,payment_method,passthrough,Direct copy of source column
+sales_data,,sales_data_bronze,_load_timestamp,type_cast,Inject current UTC ISO timestamp at load time
+sales_data,,sales_data_bronze,_source_file,type_cast,Inject source file path at load time
+stores,store_id,stores_bronze,store_id,passthrough,Direct copy of source column
+stores,store_name,stores_bronze,store_name,passthrough,Direct copy of source column
+stores,region,stores_bronze,region,passthrough,Direct copy of source column
+stores,city,stores_bronze,city,passthrough,Direct copy of source column
+stores,state,stores_bronze,state,passthrough,Direct copy of source column
+stores,,stores_bronze,_load_timestamp,type_cast,Inject current UTC ISO timestamp at load time
+stores,,stores_bronze,_source_file,type_cast,Inject source file path at load time

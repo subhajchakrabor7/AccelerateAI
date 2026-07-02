@@ -1,0 +1,33 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+products_bronze,,products_silver,pk_products_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+products_bronze,product_id,products_silver,product_id,passthrough,Direct copy from Bronze
+products_bronze,product_name,products_silver,product_name,passthrough,Direct copy from Bronze
+products_bronze,category,products_silver,category,passthrough,Direct copy from Bronze
+products_bronze,standard_price,products_silver,standard_price,passthrough,Direct copy from Bronze
+products_bronze,_load_timestamp,products_silver,_load_timestamp,passthrough,Direct copy from Bronze
+products_bronze,_source_file,products_silver,_source_file,passthrough,Direct copy from Bronze
+products_bronze,,products_silver,,dedup,Drop fully duplicate rows
+sales_data_bronze,,sales_data_silver,pk_sales_data_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+sales_data_bronze,transaction_id,sales_data_silver,transaction_id,passthrough,Direct copy from Bronze
+sales_data_bronze,transaction_date,sales_data_silver,transaction_date,passthrough,Direct copy from Bronze
+sales_data_bronze,store_id,sales_data_silver,store_id,passthrough,Direct copy from Bronze
+sales_data_bronze,product_id,sales_data_silver,product_id,passthrough,Direct copy from Bronze
+sales_data_bronze,product_name,sales_data_silver,product_name,passthrough,Direct copy from Bronze
+sales_data_bronze,category,sales_data_silver,category,passthrough,Direct copy from Bronze
+sales_data_bronze,quantity,sales_data_silver,quantity,passthrough,Direct copy from Bronze
+sales_data_bronze,unit_price,sales_data_silver,unit_price,passthrough,Direct copy from Bronze
+sales_data_bronze,total_amount,sales_data_silver,total_amount,passthrough,Direct copy from Bronze
+sales_data_bronze,customer_segment,sales_data_silver,customer_segment,passthrough,Direct copy from Bronze
+sales_data_bronze,payment_method,sales_data_silver,payment_method,passthrough,Direct copy from Bronze
+sales_data_bronze,_load_timestamp,sales_data_silver,_load_timestamp,passthrough,Direct copy from Bronze
+sales_data_bronze,_source_file,sales_data_silver,_source_file,passthrough,Direct copy from Bronze
+sales_data_bronze,,sales_data_silver,,dedup,Drop fully duplicate rows
+stores_bronze,,stores_silver,pk_stores_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+stores_bronze,store_id,stores_silver,store_id,passthrough,Direct copy from Bronze
+stores_bronze,store_name,stores_silver,store_name,passthrough,Direct copy from Bronze
+stores_bronze,region,stores_silver,region,passthrough,Direct copy from Bronze
+stores_bronze,city,stores_silver,city,passthrough,Direct copy from Bronze
+stores_bronze,state,stores_silver,state,passthrough,Direct copy from Bronze
+stores_bronze,_load_timestamp,stores_silver,_load_timestamp,passthrough,Direct copy from Bronze
+stores_bronze,_source_file,stores_silver,_source_file,passthrough,Direct copy from Bronze
+stores_bronze,,stores_silver,,dedup,Drop fully duplicate rows

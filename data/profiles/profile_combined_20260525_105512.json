@@ -1,0 +1,45 @@
+{
+  "files": [
+    "C:\\Users\\vvishaleravachi\\Downloads\\IDAMP\\IDAMP\\data\\landing\\sales_data.csv"
+  ],
+  "datasets": {
+    "sales_data": {
+      "file": "C:\\Users\\vvishaleravachi\\Downloads\\IDAMP\\IDAMP\\data\\landing\\sales_data.csv",
+      "shape": {
+        "rows": 3,
+        "columns": 3
+      },
+      "columns": {
+        "transaction_id": {
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 3,
+          "min": 101.0,
+          "max": 103.0,
+          "mean": 102.0
+        },
+        "customer_name": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 3,
+          "sample_values": [
+            "Alice",
+            "Bob",
+            "Charlie"
+          ]
+        },
+        "purchase_amount": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 3,
+          "min": 75.25,
+          "max": 200.0,
+          "mean": 141.91666666666666
+        }
+      }
+    }
+  }
+}

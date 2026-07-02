@@ -1,0 +1,8 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+sales_data_bronze,,sales_data_silver,pk_sales_data_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+sales_data_bronze,transaction_id,sales_data_silver,transaction_id,passthrough,Direct copy from Bronze
+sales_data_bronze,customer_name,sales_data_silver,customer_name,passthrough,Direct copy from Bronze
+sales_data_bronze,purchase_amount,sales_data_silver,purchase_amount,passthrough,Direct copy from Bronze
+sales_data_bronze,_load_timestamp,sales_data_silver,_load_timestamp,passthrough,Direct copy from Bronze
+sales_data_bronze,_source_file,sales_data_silver,_source_file,passthrough,Direct copy from Bronze
+sales_data_bronze,,sales_data_silver,,dedup,Drop fully duplicate rows

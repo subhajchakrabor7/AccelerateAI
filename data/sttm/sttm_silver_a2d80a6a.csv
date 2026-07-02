@@ -1,0 +1,11 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+sales_data_bronze,,sales_data_silver,pk_sales_data_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+sales_data_bronze,product_id,sales_data_silver,product_id,type_cast,
+sales_data_bronze,product_name,sales_data_silver,product_name,fill_null,mode
+sales_data_bronze,product_price,sales_data_silver,product_price,fill_null,mean
+sales_data_bronze,product_category,sales_data_silver,product_category,fill_null,mode
+sales_data_bronze,order_date,sales_data_silver,order_date,date_format,YYYY-MM-DD
+sales_data_bronze,customer_id,sales_data_silver,customer_id,type_cast,
+sales_data_bronze,order_total,sales_data_silver,order_total,fill_null,mean
+sales_data_bronze,order_quantity,sales_data_silver,order_quantity,fill_null,mean
+sales_data_bronze,,sales_data_silver,,dedup,Drop fully duplicate rows

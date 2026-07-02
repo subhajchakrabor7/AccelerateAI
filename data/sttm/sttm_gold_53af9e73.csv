@@ -1,0 +1,8 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+stores_silver,,gold,pk_gold_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+sales_data_silver,store_id,gold,store_id,passthrough,
+sales_data_silver,product_id,gold,product_id,passthrough,
+sales_data_silver,sales_amount,gold,total_sales_amount,aggregate,sum
+sales_data_silver,sales_amount,gold,avg_sales_amount,aggregate,avg
+sales_data_silver,store_id,gold,store_id,join,inner join on store_id
+products_silver,product_id,gold,product_id,join,inner join on product_id

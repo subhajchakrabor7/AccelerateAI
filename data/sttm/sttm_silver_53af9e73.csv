@@ -1,0 +1,18 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+stores_bronze,,stores_silver,pk_stores_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+stores_bronze,store_id,stores_silver,store_id,type_cast,
+stores_bronze,store_name,stores_silver,store_name,fill_null,Fill with mode
+stores_bronze,store_address,stores_silver,store_address,fill_null,Fill with mode
+sales_data_bronze,,sales_data_silver,pk_sales_data_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+sales_data_bronze,sales_id,sales_data_silver,sales_id,type_cast,
+sales_data_bronze,sales_date,sales_data_silver,sales_date,date_format,YYYY-MM-DD
+sales_data_bronze,product_id,sales_data_silver,product_id,type_cast,
+sales_data_bronze,sales_amount,sales_data_silver,sales_amount,fill_null,Fill with mean
+sales_data_bronze,sales_quantity,sales_data_silver,sales_quantity,fill_null,Fill with mean
+products_bronze,,products_silver,pk_products_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+products_bronze,product_id,products_silver,product_id,type_cast,
+products_bronze,product_name,products_silver,product_name,fill_null,Fill with mode
+products_bronze,product_description,products_silver,product_description,fill_null,Fill with mode
+stores_bronze,,stores_silver,dedup_stores_silver_id,dedup,Drop fully duplicate rows
+sales_data_bronze,,sales_data_silver,dedup_sales_data_silver_id,dedup,Drop fully duplicate rows
+products_bronze,,products_silver,dedup_products_silver_id,dedup,Drop fully duplicate rows
