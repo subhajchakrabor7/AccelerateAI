@@ -1,0 +1,379 @@
+{
+  "summary": {
+    "business_intent": "What are top-selling poducts?",
+    "tables_analyzed": [
+      "products_gold",
+      "sales_data_gold",
+      "sales_data_silver",
+      "stores_gold"
+    ],
+    "summary_lines": [
+      "Table: products_gold | Rows: 20",
+      "  Top product_name: Neutrogena SPF 50 with pk_gold_id=20.00",
+      "  Numeric columns analyzed: 5 columns",
+      "Table: sales_data_gold | Rows: 174",
+      "  Top store_id: S10 with pk_gold_id=1953.00",
+      "  Numeric columns analyzed: 6 columns",
+      "Table: sales_data_silver | Rows: 174",
+      "  Top _load_timestamp: 2026-06-03T08:46:03.456119+00:00 with pk_gold_id=15225.00",
+      "  Numeric columns analyzed: 4 columns",
+      "Table: stores_gold | Rows: 10",
+      "  Top store_id: S10 with pk_gold_id=10.00",
+      "  Numeric columns analyzed: 6 columns"
+    ]
+  },
+  "analysis": {
+    "products_gold": {
+      "schema": [
+        {
+          "column_name": "pk_gold_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pk_products_silver_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "product_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_load_timestamp",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_source_file",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "row_count": 20,
+      "top_groups": [
+        {
+          "product_name": "Neutrogena SPF 50",
+          "total": 20.0
+        },
+        {
+          "product_name": "La Mer Cream",
+          "total": 19.0
+        },
+        {
+          "product_name": "Dyson Airwrap",
+          "total": 18.0
+        },
+        {
+          "product_name": "CeraVe Moisturizer",
+          "total": 17.0
+        },
+        {
+          "product_name": "CamelBak Water Bottle",
+          "total": 16.0
+        },
+        {
+          "product_name": "Bowflex Dumbbells",
+          "total": 15.0
+        },
+        {
+          "product_name": "TRX Resistance Bands",
+          "total": 14.0
+        },
+        {
+          "product_name": "Peloton Mat",
+          "total": 13.0
+        },
+        {
+          "product_name": "Nespresso Machine",
+          "total": 12.0
+        },
+        {
+          "product_name": "Vitamix Blender",
+          "total": 11.0
+        },
+        {
+          "product_name": "KitchenAid Mixer",
+          "total": 10.0
+        },
+        {
+          "product_name": "Instant Pot Duo",
+          "total": 9.0
+        },
+        {
+          "product_name": "Champion Hoodie",
+          "total": 8.0
+        },
+        {
+          "product_name": "Patagonia Fleece",
+          "total": 7.0
+        },
+        {
+          "product_name": "Nike Air Max",
+          "total": 6.0
+        }
+      ],
+      "group_col": "product_name",
+      "value_col": "pk_gold_id"
+    },
+    "sales_data_gold": {
+      "schema": [
+        {
+          "column_name": "pk_gold_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pk_sales_data_silver_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "store_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "product_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_load_timestamp",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_source_file",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "row_count": 174,
+      "top_groups": [
+        {
+          "store_id": "S10",
+          "total": 1953.0
+        },
+        {
+          "store_id": "S08",
+          "total": 1885.0
+        },
+        {
+          "store_id": "S01",
+          "total": 1814.0
+        },
+        {
+          "store_id": "S05",
+          "total": 1784.0
+        },
+        {
+          "store_id": "S07",
+          "total": 1520.0
+        },
+        {
+          "store_id": "S03",
+          "total": 1414.0
+        },
+        {
+          "store_id": "S02",
+          "total": 1281.0
+        },
+        {
+          "store_id": "S09",
+          "total": 1202.0
+        },
+        {
+          "store_id": "S04",
+          "total": 987.0
+        },
+        {
+          "store_id": "S06",
+          "total": 981.0
+        },
+        {
+          "store_id": null,
+          "total": 404.0
+        }
+      ],
+      "group_col": "store_id",
+      "value_col": "pk_gold_id"
+    },
+    "sales_data_silver": {
+      "schema": [
+        {
+          "column_name": "pk_gold_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pk_sales_data_silver_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_load_timestamp",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_source_file",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "row_count": 174,
+      "top_groups": [
+        {
+          "_load_timestamp": "2026-06-03T08:46:03.456119+00:00",
+          "total": 15225.0
+        }
+      ],
+      "group_col": "_load_timestamp",
+      "value_col": "pk_gold_id"
+    },
+    "stores_gold": {
+      "schema": [
+        {
+          "column_name": "pk_gold_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pk_stores_silver_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "store_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "store_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_load_timestamp",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_source_file",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "row_count": 10,
+      "top_groups": [
+        {
+          "store_id": "S10",
+          "total": 10.0
+        },
+        {
+          "store_id": "S09",
+          "total": 9.0
+        },
+        {
+          "store_id": "S08",
+          "total": 8.0
+        },
+        {
+          "store_id": "S07",
+          "total": 7.0
+        },
+        {
+          "store_id": "S06",
+          "total": 6.0
+        },
+        {
+          "store_id": "S05",
+          "total": 5.0
+        },
+        {
+          "store_id": "S04",
+          "total": 4.0
+        },
+        {
+          "store_id": "S03",
+          "total": 3.0
+        },
+        {
+          "store_id": "S02",
+          "total": 2.0
+        },
+        {
+          "store_id": "S01",
+          "total": 1.0
+        }
+      ],
+      "group_col": "store_id",
+      "value_col": "pk_gold_id"
+    }
+  }
+}

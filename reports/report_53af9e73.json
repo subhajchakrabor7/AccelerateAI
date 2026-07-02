@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "business_intent": "what is total sales amount",
+    "tables_analyzed": [
+      "gold"
+    ],
+    "summary_lines": [
+      "Table: gold | Rows: 184",
+      "  Top store_id: nan with pk_gold_id=15225.00",
+      "  Numeric columns analyzed: 8 columns"
+    ]
+  },
+  "analysis": {
+    "gold": {
+      "schema": [
+        {
+          "column_name": "pk_gold_id",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pk_stores_silver_id",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "store_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_load_timestamp",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "_source_file",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pk_sales_data_silver_id",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "product_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pk_products_silver_id",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "row_count": 184,
+      "top_groups": [
+        {
+          "store_id": NaN,
+          "total": 15225.0
+        },
+        {
+          "store_id": "S10",
+          "total": 184.0
+        },
+        {
+          "store_id": "S09",
+          "total": 183.0
+        },
+        {
+          "store_id": "S08",
+          "total": 182.0
+        },
+        {
+          "store_id": "S07",
+          "total": 181.0
+        },
+        {
+          "store_id": "S06",
+          "total": 180.0
+        },
+        {
+          "store_id": "S05",
+          "total": 179.0
+        },
+        {
+          "store_id": "S04",
+          "total": 178.0
+        },
+        {
+          "store_id": "S03",
+          "total": 177.0
+        },
+        {
+          "store_id": "S02",
+          "total": 176.0
+        },
+        {
+          "store_id": "S01",
+          "total": 175.0
+        }
+      ],
+      "group_col": "store_id",
+      "value_col": "pk_gold_id"
+    }
+  }
+}
